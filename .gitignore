@@ -22,4 +22,11 @@ https-logs/
 *.pid
 *.swp
 *.tmp
+*.jar
 *.war
+*.crt
+*.csr
+*.key
+*.p12
+*.srl
+*.pem

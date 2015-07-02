@@ -6,6 +6,7 @@ var express = require('express'),
   scribe = require('scribe-js')({rootPath: 'http-logs'}),
   console = process.console;
 
+module.exports = httpServer;
 
 function httpServer(config) {
   var port = config.httpPort;
@@ -34,5 +35,3 @@ function httpServer(config) {
 
   return server;
 }
-
-module.exports = httpServer;

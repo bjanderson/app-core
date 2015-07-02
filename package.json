@@ -1,0 +1,46 @@
+{
+  "name": "app-core",
+  "version": "0.0.0",
+  "description": "A foundation to build large-scale MEAN web applications on.",
+  "main": "server/app.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bjanderson/app-core.git"
+  },
+  "keywords": [
+    "MEAN",
+    "angular",
+    "angularjs",
+    "node",
+    "nodejs",
+    "express",
+    "expressjs",
+    "node express",
+    "mongo",
+    "mongodb",
+    "web application template"
+  ],
+  "author": "Bartley Anderson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bjanderson/app-core/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-auto-install": "~0.2.4",
+    "load-grunt-configs": "~0.4.3",
+    "load-grunt-tasks": "~3.2.0",
+    "grunt-timer": "~0.6.0",
+    "grunt-express-server": "~0.5.1",
+    "grunt-open": "~0.2.3",
+    "grunt-env": "~0.4.4",
+    "scribe-js": "~2.0.4",
+    "express": "~4.13.0",
+    "body-parser": "~1.13.1",
+    "grunt-contrib-watch": "~0.6.1"
+  }
+}

@@ -1,0 +1,25 @@
+# --------------------------
+# Folders
+# --------------------------
+node_modules/
+client/vendor/
+dist/
+tmp/
+logs/
+http-logs/
+https-logs/
+
+# --------------------------
+# Files
+# --------------------------
+*.bak
+*.css
+*.csv
+*.dat
+*.gz
+*.log
+*.out
+*.pid
+*.swp
+*.tmp
+*.war

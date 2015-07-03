@@ -26,7 +26,16 @@ module.exports = function(grunt) {
     'default',
     [
       'auto_install',
+      'updateCSS',
       'serve'
+    ]
+  );
+
+  grunt.registerTask(
+    'updateCSS',
+    [
+      'less',
+      'postcss'
     ]
   );
 
@@ -47,5 +56,6 @@ module.exports = function(grunt) {
         grunt.log.error('grunt serve - Invalid option. server can be either "http" or "https". env can be either "dev" or "dist"');
       }
   });
+
 
 };

@@ -1,5 +1,5 @@
 'use strict';
-// Add vendor prefixed styles to css
+// Run post-processors on css files.
 module.exports = {
   options: {
 
@@ -11,7 +11,7 @@ module.exports = {
     ]
   },
 
-  all: {
+  dev: {
     src: 'client/main.css'
   }
 };

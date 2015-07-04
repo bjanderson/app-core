@@ -16,7 +16,7 @@ module.exports.tasks = {
         'client/**/*.less'
       ],
       tasks: [
-        'updateCSS'
+        'update-css'
       ],
       options: {
         livereload: true

@@ -26,6 +26,7 @@ module.exports = function(grunt) {
     'default',
     [
       'auto_install',
+      'wiredep',
       'update-css',
       'serve'
     ]

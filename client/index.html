@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en-us">
+<html lang="en-us" ng-app="MainApp" ng-controller="MainAppCtrl">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <title>app-core - Welcome</title>
+  <title ng-bind="pageTitle"></title>
   
   <!-- bower:css -->
   <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css" />
@@ -15,7 +15,10 @@
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <h1>Hello, app-core!</h1>
+  
+  <header ng-include="'common/html/header.tpl.html'"></header>
+  <div ui-view></div> <!-- use ui-view because we are using ui-router -->
+  <footer ng-include="'common/html/footer.tpl.html'"></footer>
 
   <!-- bower:js -->
   <script src="vendor/jquery/dist/jquery.js"></script>
@@ -24,5 +27,7 @@
   <script src="vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
   <script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
   <!-- endbower -->
+
+  <script src="main.js"></script>
 </body>
 </html>

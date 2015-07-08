@@ -27,6 +27,7 @@ module.exports = function(grunt) {
     [
       'auto_install',
       'wiredep',
+      'injector',
       'update-css',
       'serve'
     ]
@@ -41,6 +42,7 @@ module.exports = function(grunt) {
       var e = env || 'dev';
       if(e === 'dev' || e === 'dist') {
         grunt.task.run([
+          'less_imports',
           'less',
           'postcss:' + e
         ]);

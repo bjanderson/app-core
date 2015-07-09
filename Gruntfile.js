@@ -27,6 +27,7 @@ module.exports = function(grunt) {
     [
       'auto_install',
       'wiredep',
+      'ngtemplates',
       'injector',
       'update-css',
       'serve'

@@ -2,6 +2,7 @@
 
 angular.module('Home', 
   [
+    'HTMLTemplates',
     'ui.router'
   ]
 );
@@ -32,7 +33,7 @@ angular.module('Home').config(
   ]
 );
 
-angular.module.('Home').controller(
+angular.module('Home').controller(
   'HomeCtrl',
   [
     '$scope',

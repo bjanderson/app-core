@@ -35,6 +35,7 @@
     "cssnano": "~2.0.2",
     "express": "~4.13.0",
     "grunt": "~0.4.5",
+    "grunt-angular-templates": "^0.5.7",
     "grunt-auto-install": "~0.2.4",
     "grunt-contrib-jshint": "^0.11.2",
     "grunt-contrib-less": "~1.0.1",

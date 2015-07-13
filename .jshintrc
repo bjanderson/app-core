@@ -1,0 +1,78 @@
+/* find a list of all options at http://jshint.com/docs/options/ */
+{
+    "asi": false,
+
+    "bitwise": true,
+    "boss": false,
+    "browser": true,
+
+    "camelcase": false,
+    "curly": true,
+
+    "debug": false,
+    "devel": false,
+
+    "elision": false,
+    "eqeqeq": true,
+    "eqnull": false,
+    //"es5": true,
+    "esnext": false,
+    "evil": false,
+    "expr": false,
+
+    "forin": true,
+    "freeze": true,
+    "funcscope": false,
+    "futurehostile": true,
+
+    "globals": {
+        /* angular.js */
+        "angular": true,
+        "inject": true,
+
+        /* d3js */
+        "d3": true
+    },
+    "globalstrict": true,
+
+    "iterator": false,
+
+    "jasmine": true,
+    "jquery": true,
+
+    "lastsemic": false,
+    "latedef": "nofunc",
+    "loopfunc": false,
+
+    "maxcomplexity": false,
+    "maxdepth": false,
+    "maxerr": 50,
+    "maxlen": false,
+    "maxparams": false,
+    "maxstatements": false,
+    "moz": false,
+
+    "noarg": true,
+    "nocomma": false,
+    "node": true,
+    "nonbsp": true,
+    "nonew": true,
+    "notypeof": false,
+    "noyield": false,
+
+    "plusplus": false,
+    "proto": false,
+
+    "scripturl": false,
+    "shadow": false,
+    "singleGroups": false,
+    "strict": true,
+    "supernew": false,
+
+    "undef": true,
+    "unused": false,
+
+    "validthis": false,
+
+    "withstmt": false
+}

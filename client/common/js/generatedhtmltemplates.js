@@ -12,7 +12,7 @@ angular.module('HTMLTemplates', []).run(['$templateCache', function($templateCac
 
 
   $templateCache.put('modules/home/home.tpl.html',
-    "<h1>Hello, {{title}}!</h1>"
+    "<h1>Hello, {{home.title}}!</h1>"
   );
 
 }]);

@@ -25,20 +25,31 @@ module.exports = function(grunt) {
   grunt.registerTask(
     'default',
     [
-      'auto_install',
-      'wiredep',
-      'ngtemplates',
-      'injector',
-      'update-css',
+      'init',
+      'run-css-tasks',
+      'run-js-tasks',
       'serve'
     ]
   );
 
   grunt.registerTask(
-    'update-css',
-    'Run all less and css related tasks. Usage update-css: env',
+    'init',
+    'Run all pre-requisite tasks that install and inject dependencies.',
+    function () {
+      grunt.task.run([
+        'auto_install',
+        'wiredep',
+        'ngtemplates',
+        'injector'
+      ]);
+    }
+  );
+
+  grunt.registerTask(
+    'run-css-tasks',
+    'Run all less and css related tasks. Usage run-css-tasks: env',
     function (env) {
-      // how to run this task: 'grunt update-css:env'
+      // how to run this task: 'grunt run-css-tasks:env'
       // env is optional - defaults to 'dev'
       var e = env || 'dev';
       if(e === 'dev' || e === 'dist') {
@@ -48,7 +59,25 @@ module.exports = function(grunt) {
           'postcss:' + e
         ]);
       } else {
-        grunt.log.error('grunt update-css:env - Invalid option. env can be either "dev" or "dist".');
+        grunt.log.error('grunt run-css-tasks:env - Invalid option. env can be either "dev" or "dist".');
+      }
+    }
+  );
+
+  grunt.registerTask(
+    'run-js-tasks',
+    'Run all js related tasks. Usage run-js-tasks: env',
+    function (env) {
+      // how to run this task: 'grunt run-js-tasks:env'
+      // env is optional - defaults to 'dev'
+      var e = env || 'dev';
+      if(e === 'dev' || e === 'dist') {
+        grunt.task.run([
+          'jshint',
+          'jscs'
+        ]);
+      } else {
+        grunt.log.error('grunt run-js-tasks:env - Invalid option. env can be either "dev" or "dist".');
       }
     }
   );

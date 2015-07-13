@@ -5,7 +5,7 @@ var http = require('./servers/http'),
   config = {
     env: process.env.NODE_ENV || 'dev',
     httpPort: process.env.HTTP_PORT || 20080,
-    httpsPort: process.env.HTTPS_PORT || 20443,
+    httpsPort: process.env.HTTPS_PORT || 20443
   },
   httpServer = http(config),
   httpsServer = https(config),

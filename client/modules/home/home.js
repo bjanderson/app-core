@@ -1,46 +1,53 @@
+(function () {
 'use strict';
 
-angular.module('Home', 
-  [
-    'HTMLTemplates',
-    'ui.router'
-  ]
-);
+angular
+  .module('Home', 
+    [
+      'HTMLTemplates',
+      'ui.router'
+    ]
+  )
 
-angular.module('Home').config(
-  [
-    '$stateProvider',
-    function (
-       $stateProvider
-    ) {
+  .config(
+    [
+      '$stateProvider',
+      HomeConfig    
+    ]
+  )
 
-      $stateProvider.state('home', {
-        url: '/home',
-        views: {
-          '': {
-            controller: 'HomeCtrl',
-            templateProvider: function ($templateCache) {
-              return $templateCache.get('modules/home/home.tpl.html');
-            }
-          }
-        },
+  .controller(
+    'HomeCtrl',
+    [
+      HomeCtrl
+    ]
+  );
 
-        data: {
-          pageTitle: 'Home'
+function HomeConfig($stateProvider) {
+  $stateProvider.state('home', {
+    url: '/home',
+    views: {
+      '': {
+        controller: 'HomeCtrl',
+        controllerAs: 'home',
+        templateProvider: function ($templateCache) {
+          return $templateCache.get('modules/home/home.tpl.html');
         }
-      });
-    }
-  ]
-);
+      }
+    },
 
-angular.module('Home').controller(
-  'HomeCtrl',
-  [
-    '$scope',
-    function (
-      $scope
-    ) {
-      $scope.title = 'Home';
+    data: {
+      pageTitle: 'Home'
     }
-  ]
-);
+  });
+}
+
+function HomeCtrl() {
+  var self = this;
+
+  self.title = 'Home';
+  
+}
+
+
+})();

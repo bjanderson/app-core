@@ -7,20 +7,6 @@ module.exports.tasks = {
         'client/main.css': 'client/main.less'
       }
     }
-  },
-
-  watch: {
-    less: {
-      files: [ //regenerate the css when any .less files change
-        'client/*.less',
-        'client/**/*.less'
-      ],
-      tasks: [
-        'update-css'
-      ],
-      options: {
-        livereload: true
-      }
-    }
   }
+  
 };

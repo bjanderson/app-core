@@ -28,8 +28,40 @@ module.exports = function(grunt) {
       'init',
       'run-css-tasks',
       'run-js-tasks',
+      'karma',
       'serve'
     ]
+  );
+
+  grunt.registerTask(
+    'build',
+    'Build the project and put it in the dist directory.',
+    function (debug) {
+      // how to run this task: 'grunt build:debug'
+      // debug is optional - if specified it will copy all source code to the dist directory as-is
+      var e = debug ? 'debug' : 'dist';
+      if(e === 'dist') {
+        grunt.task.run([
+          'init',
+          'clean:dist',
+          'copy:dist',
+          'run-css-tasks:dist',
+          'run-js-tasks:dist',
+          'ngAnnotate:dist',
+          'concat:dist',
+          'uglify:dist',
+          'rename:dist'
+        ]);
+      } else if(e === 'debug') {
+        grunt.task.run([
+          'init',
+          'clean:dist',
+          'run-css-tasks',
+          'run-js-tasks',
+          'copy:debug'
+        ]);
+      }
+    }
   );
 
   grunt.registerTask(
@@ -95,7 +127,7 @@ module.exports = function(grunt) {
       if((e === 'dev' || e === 'dist') && (s === 'http' || s === 'https')) {
         grunt.task.run([
           'env:' + e,
-          'express:' + e,
+          'express',
           'open:' + s,
           'watch'
         ]);

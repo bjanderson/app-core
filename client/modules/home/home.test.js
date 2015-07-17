@@ -1,16 +1,12 @@
 'use strict';
 
 describe('Module: Home, Controller: HomeCtrl (modules/home/home.js)', function () {
-  var ctrl,
-    scope;
+  var ctrl;
 
   beforeEach(module('Home'));
 
-  beforeEach(inject(function ($controller, $rootScope) {
-    //scope = $rootScope.$new();
-    ctrl = $controller('HomeCtrl');/*, {
-      $scope: scope,
-    });*/
+  beforeEach(inject(function ($controller) {
+    ctrl = $controller('HomeCtrl');
   }));
 
   describe('scope properties', function () {

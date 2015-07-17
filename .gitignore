@@ -1,32 +1,34 @@
 # --------------------------
 # Folders
 # --------------------------
-node_modules/
 client/vendor/
 dist/
-tmp/
-logs/
+doc/
 http-logs/
 https-logs/
+logs/
+node_modules/
+tmp/
+
 
 # --------------------------
 # Files
 # --------------------------
 *.bak
+*.crt
+*.csr
 *.css
 *.csv
 *.dat
 *.gz
+*.jar
+*.key
 *.log
 *.out
+*.p12
+*.pem
 *.pid
+*.srl
 *.swp
 *.tmp
-*.jar
 *.war
-*.crt
-*.csr
-*.key
-*.p12
-*.srl
-*.pem

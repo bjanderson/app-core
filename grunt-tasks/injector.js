@@ -18,19 +18,20 @@ module.exports.tasks = {
         ]
       }
     }
-  },
+  }/*,
 
   watch: {
     injector: {
       files: [
-        'client/common/**/*.js',
-        'client/modules/**/*.js',
-        'client/main.js'
+        'client/common/** /*.js',
+        'client/modules/** /*.js',
+        'client/main.js',
+        '!client/common/js/generatedhtmltemlates.js'
       ],
       options: {
         livereload: true
       }
     }
-  }
+  }*/
 };
   

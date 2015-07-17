@@ -21,7 +21,8 @@ module.exports.tasks = {
     js: {
       files: [ //run jshint when any javascript files change
         '**/*.js',
-        '.jshintrc'
+        '.jshintrc',
+        '!client/common/js/generatedhtmltemlates.js'
       ],
       tasks: [
         'run-js-tasks'

@@ -29,6 +29,7 @@ module.exports = function(grunt) {
       'run-css-tasks',
       'run-js-tasks',
       'karma',
+      'jsdoc',
       'serve'
     ]
   );

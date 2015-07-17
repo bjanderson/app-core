@@ -14,7 +14,7 @@
   "fileExtensions": [ ".js" ],
 
   "jsDoc": {
-    "checkAnnotations": "closurecompiler",
+    "checkAnnotations": "jsdoc3",
     "checkParamNames": true,
     "requireParamTypes": true,
     "checkRedundantParams": true,

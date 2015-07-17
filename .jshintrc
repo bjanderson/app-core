@@ -14,7 +14,7 @@
 
     "elision": false,
     "eqeqeq": true,
-    "eqnull": false,
+    "eqnull": true,
     //"es5": true,
     "esnext": false,
     "evil": false,
@@ -70,7 +70,7 @@
     "supernew": false,
 
     "undef": true,
-    "unused": false,
+    "unused": true,
 
     "validthis": false,
 

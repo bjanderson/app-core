@@ -4,6 +4,7 @@
 angular
   .module('MainApp',
     [
+      'Demo',
       'Home',
       'ui.router'
     ]
@@ -32,7 +33,7 @@ function MainAppConfig($urlRouterProvider) {
 }
 
 function MainAppCtrl($location, $scope) {
-  $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+  $scope.$on('$stateChangeSuccess', function (event, toState) {
     var siteName = 'MEAN App Core';
 
     //update the page title from the title value defined in the new state

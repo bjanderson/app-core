@@ -1,0 +1,19 @@
+<!--
+    A simple alert dialog that allows you to cusomize the title and alert message.
+-->
+
+<div class="modal-header alert-info">
+    <button type="button" class="close" ng-click="close()" ng-hide="data._backdrop === 'static'" aria-hidden="true">&times;</button>
+    <h3 class="modal-title">
+      <i class="fa fa-info-circle"></i>
+      {{data._modalTitle}}
+    </h3>
+</div>
+
+<div class="modal-body">
+    <p>{{data.message}}</p>
+</div>
+
+<div class="modal-footer">
+    <button class="btn btn-warning" ng-click="close()">Close</button>
+</div>

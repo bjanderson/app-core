@@ -8,7 +8,8 @@ module.exports.tasks = {
     css: {
       files: [ //regenerate the css when any .less files change
         'client/*.less',
-        'client/**/*.less'
+        'client/**/*.less',
+        '!client/imports.less'
       ],
       tasks: [
         'run-css-tasks'

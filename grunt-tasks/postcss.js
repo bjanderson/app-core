@@ -1,26 +1,28 @@
 'use strict';
 // Run post-processors on css files.
-module.exports = {
+module.exports.tasks = {
 
-  dev: {
-    src: 'client/main.css'
-  },
+  postcss: {
+    dev: {
+      src: 'client/main.css'
+    },
 
-  dist: {
-    src: 'dist/main.css',
-    options: {
-      processors: [
-        // add fallbacks for rem units
-        require('pixrem')(),
+    dist: {
+      src: 'dist/main.css',
+      options: {
+        processors: [
+          // add fallbacks for rem units
+          require('pixrem')(),
 
-        // add vendor prefixes
-        require('autoprefixer-core')({
-          browsers: 'last 3 versions'
-        }),
+          // add vendor prefixes
+          require('autoprefixer-core')({
+            browsers: 'last 3 versions'
+          }),
 
-        // minify the result
-        require('cssnano')()
-      ]
+          // minify the result
+          require('cssnano')()
+        ]
+      }
     }
   }
 };

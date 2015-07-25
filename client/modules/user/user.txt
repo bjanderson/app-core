@@ -1,0 +1,19 @@
+user.txt
+
+User
+------------------------------
+
+- Login
+- Register
+- Forgot Username/Password
+- Preferences
+- Profile
+
+
+- user object:
+  first name
+  last name
+  username
+  password
+  email
+  id

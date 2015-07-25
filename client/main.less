@@ -1,9 +1,96 @@
 /******************************************************************************
 main.less
 ******************************************************************************/
+
+/***************
+variables
+***************/
+@body-color: #eee;
+
+
+/***************
+general
+***************/
+body {
+  background: #333;
+}
+
 .padding-20 {
   padding: 20px;
 }
+
+.center-text {
+  width: 100%;
+  text-align: center;
+}
+
+
+/***************
+header
+***************/
+header {
+  background: #333;
+  color: @body-color;
+  height: 34px;
+  left: 0;
+  padding-left: 5px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999999999;
+
+  .title {
+    color: @body-color;
+    font-size: 24px;
+    font-weight: 900;
+    text-decoration: none;
+  }
+}
+
+
+/***************
+sidenav
+***************/
+.sidenav {
+  float: left;
+  width: 200px;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 0 5px;
+
+    li {
+      display: block;
+
+      a {
+        color: @body-color
+      }
+    }
+  }
+}
+
+
+/***************
+main
+***************/
+.main {
+  background: #fff;
+  margin-left: 200px;
+  margin-top: 35px;
+  padding-bottom: 10px;
+}
+
+
+/***************
+footer
+***************/
+footer {
+  text-align: center;
+  width: 100%;
+  color: @body-color;
+}
+
 
 /******************************************************************************
 keep these imports at the bottom so they can overwrite everything set above.

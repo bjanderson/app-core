@@ -2,12 +2,17 @@ angular.module('HTMLTemplates', []).run(['$templateCache', function($templateCac
   'use strict';
 
   $templateCache.put('common/html/footer.tpl.html',
-    "Copyright &copy; now me."
+    "<footer>Copyright &copy; now me.</footer>"
   );
 
 
   $templateCache.put('common/html/header.tpl.html',
-    "<h1>Hello, app-core!</h1>"
+    "<a class=\"title\" ui-sref=\"home\">app-core</a>"
+  );
+
+
+  $templateCache.put('common/html/sidenav.tpl.html',
+    "<div class=\"sidenav\"><ul><li><a ui-sref=\"demo\">Demos</a></li><li><a ui-sref=\"login\">Login</a></li><li><a ui-sref=\"userprofile\">User Profile</a></li><li><a ui-sref=\"usersettings\">User Settings</a></li></ul></div>"
   );
 
 
@@ -42,7 +47,32 @@ angular.module('HTMLTemplates', []).run(['$templateCache', function($templateCac
 
 
   $templateCache.put('modules/home/home.tpl.html',
-    "<div class=\"padding-20\"><h1>Hello, {{home.title}}!</h1><a ui-sref=\"demo\">Demos</a></div>"
+    "<div class=\"padding-20\"><h1>{{home.title}}!</h1></div>"
+  );
+
+
+  $templateCache.put('modules/user/login.tpl.html',
+    "<h1>Login</h1><div style=\"width: 300px\"><div class=\"center-text alert-danger\" ng-show=\"user.loginerror === true\"><i class=\"fa fa-times-circle\"></i> Invalid username or password.</div><div class=\"form-group\"><label for=\"username\">Username</label><input id=\"username\" type=\"email\" class=\"form-control\" ng-model=\"user.user.email\" placeholder=\"Email address\"></div><div class=\"form-group\"><label for=\"password\">Password</label><input id=\"password\" type=\"password\" class=\"form-control\" ng-model=\"user.password\" placeholder=\"Password\"></div><div class=\"center-text\"><button type=\"submit\" class=\"btn btn-primary\" ng-click=\"user.logIn();\">Log In</button></div><div class=\"center-text\"><a ui-sref=\"recover\">Forgot password?</a><br><a ui-sref=\"signup\">Sign Up</a></div></div>"
+  );
+
+
+  $templateCache.put('modules/user/profile.tpl.html',
+    "<h1>Profile</h1>"
+  );
+
+
+  $templateCache.put('modules/user/recover.tpl.html',
+    "<h1>Recover Password</h1>"
+  );
+
+
+  $templateCache.put('modules/user/settings.tpl.html',
+    "<h1>Settings</h1>"
+  );
+
+
+  $templateCache.put('modules/user/signup.tpl.html',
+    "<h1>Create Account</h1>"
   );
 
 }]);

@@ -7,7 +7,12 @@ var http = require('./servers/http'),
     httpPort: process.env.HTTP_PORT || 20080,
     httpsPort: process.env.HTTPS_PORT || 20443
   },
-  httpServer = http(config),
-  httpsServer = https(config),
-  scribe = require('scribe-js')(),
-  console = process.console;
+  httpServer,
+  httpsServer,
+  scribe,
+  console;
+
+httpServer = http(config);
+httpsServer = https(config);
+scribe = require('scribe-js')();
+console = process.console;

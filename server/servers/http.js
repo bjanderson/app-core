@@ -11,13 +11,12 @@ module.exports = httpServer;
 function httpServer(config) {
   var port = config.httpPort;
 
-  // configure express to use the scribe logger
-  server.use(scribe.express.logger());
-  server.use('/http-logs', scribe.webPanel()); // access at http://localhost:[port]/http-logs
-
   //configure express to serve static files from the given directory
   if (config.env === 'dist') {
     console.log('serving /dist');
+    // configure express to use the scribe logger
+    server.use(scribe.express.logger());
+    server.use('/http-logs', scribe.webPanel()); // access at http://localhost:[port]/http-logs
     server.use(express.static(__dirname + '/../../dist'));
   } else {
     console.log('serving /client');

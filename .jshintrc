@@ -26,6 +26,8 @@
     "futurehostile": true,
 
     "globals": {
+        "alert": true,
+
         /* angular.js */
         "angular": true,
         "inject": true,

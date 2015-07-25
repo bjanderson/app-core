@@ -18,8 +18,11 @@
 <body>
   
   <header ng-include="'common/html/header.tpl.html'"></header>
-  <div ui-view></div> <!-- use ui-view because we are using ui-router -->
-  <footer ng-include="'common/html/footer.tpl.html'"></footer>
+  <div ng-include="'common/html/sidenav.tpl.html'"></div>
+  <div class="container-fluid main">
+    <div ui-view></div> <!-- use ui-view because we are using ui-router -->
+  </div>
+  <div ng-include="'common/html/footer.tpl.html'"></div>
 
   <!-- bower:js -->
   <script src="vendor/jquery/dist/jquery.js"></script>
@@ -31,10 +34,16 @@
 
   <!-- injector:js -->
   <script src="common/js/generatedhtmltemplates.js"></script>
+  <script src="common/models/basemodel.js"></script>
+  <script src="common/models/user.model.js"></script>
+  <script src="common/restapi/baserestapi.js"></script>
+  <script src="common/restapi/user.restapi.js"></script>
   <script src="modules/demo/demo.js"></script>
   <script src="modules/demo/dialogs/dialogs.demo.js"></script>
   <script src="modules/dialogs/dialogs.js"></script>
   <script src="modules/home/home.js"></script>
+  <script src="modules/user/user.js"></script>
+  <script src="modules/user/user.service.js"></script>
   <script src="main.js"></script>
   <!-- endinjector -->
   

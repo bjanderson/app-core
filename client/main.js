@@ -6,6 +6,7 @@ angular
     [
       'Demo',
       'Home',
+      'User',
       'ui.router'
     ]
   )
@@ -22,6 +23,8 @@ angular
     [
       '$location',
       '$scope',
+      '$state',
+      'UserService',
       MainAppCtrl
     ]
   );
@@ -32,7 +35,16 @@ function MainAppConfig($urlRouterProvider) {
     .otherwise('/home');  //default to the entry point for our ui-router state handlers
 }
 
-function MainAppCtrl($location, $scope) {
+function MainAppCtrl($location, $scope, $state, UserService) {
+
+  $scope.$on('$stateChangeStart', function (event, toState, toParams) {
+    if (toState.authenticate && !UserService.isLoggedIn()) {
+      UserService.setDeferredState(toState, toParams);
+      $state.go('login');
+      event.preventDefault();
+    }
+  });
+
   $scope.$on('$stateChangeSuccess', function (event, toState) {
     var siteName = 'MEAN App Core';
 

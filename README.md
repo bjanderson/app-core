@@ -16,8 +16,11 @@ As of now, this application has full grunt configuration including:
 - launches a server (http or https)
 - opens a web browser to the served url
 - builds a deployable artifact
-- provides an extendable front-end object model and rest api
-- provides standard dialogs
+
+The following items have also been implemented:
+- an extendable front-end object model
+- an extendable front-end rest api
+- standard modal dialogs (angular-bootstrap)
 
 ## TODO:
 - implement user authentication

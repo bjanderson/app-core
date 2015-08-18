@@ -62,8 +62,11 @@ function BaseModel() {
 
     @param target (optional) - only used by the Model constructor to set the initial data on the model
     @param data (optional) - only used by the Model constructor to set the initial data on the model
+    @param convertDatesToMillis (optional) - a boolean flag to determine if date should be converted 
+                                            from milliseconds to dates, or from dates to milliseconds.
+                                            Default: convert from milliseconds to dates
   */
-  Model.prototype.getSimpleModel = function (target, data) {
+  Model.prototype.getSimpleModel = function (target, data, convertDatesToMillis) {
     var self = this,
       numFields = self._modelFields.length,
       field,
@@ -90,9 +93,14 @@ function BaseModel() {
         target[field.name] = undefined;
       }
 
-      // convert date values to actual dates
       if (field.type === 'date' && target[field.name] != null && target[field.name] !== '') {
-        target[field.name] = new Date(target[field.name]);
+        if (convertDatesToMillis === true) {
+          // convert date values to milliseconds
+          target[field.name] = new Date(target[field.name]).getTime();
+        } else {
+          // convert date values to actual dates
+          target[field.name] = new Date(target[field.name]);
+        }
       }
     }
 

@@ -21,11 +21,11 @@ module.exports = function(config) {
             'vendor/angular-bootstrap/ui-bootstrap.js',
             'vendor/angular-bootstrap/ui-bootstrap-tpls.js',
             'vendor/angular-mocks/angular-mocks.js',
-            'vendor/angular-smart-table/dist/smart-table.js',
+            //'vendor/angular-smart-table/dist/smart-table.js',
             'vendor/angular-ui-router/release/angular-ui-router.js',
             'vendor/bootstrap/dist/js/bootstrap.js',
-            'vendor/es5-shim/es5-sham.js',
-            'vendor/es5-shim/es5-shim.js',
+            //'vendor/es5-shim/es5-sham.js',
+            //'vendor/es5-shim/es5-shim.js',
             //put any other javascript dependencies here
 
             'main.js',

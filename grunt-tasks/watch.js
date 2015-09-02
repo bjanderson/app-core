@@ -27,7 +27,10 @@ module.exports.tasks = {
       ],
       tasks: [
         'run-js-tasks'
-      ]
+      ],
+      options: {
+        livereload: true
+      }
     }
   }
 }

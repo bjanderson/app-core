@@ -31,6 +31,18 @@ module.exports.tasks = {
       options: {
         livereload: true
       }
+    },
+
+    test: {
+      files: [ //run tests when any javascript files change
+        '**/*.js',
+        'karma.conf.js',
+        '!client/common/js/generatedhtmltemlates.js'
+      ],
+      tasks: [
+        'run-js-tasks',
+        'karma'
+      ],
     }
   }
 }

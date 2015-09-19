@@ -29,7 +29,6 @@ module.exports = function(grunt) {
       'run-css-tasks',
       'run-js-tasks',
       'karma',
-      'jsdoc',
       'serve'
     ]
   );
@@ -135,6 +134,18 @@ module.exports = function(grunt) {
       } else {
         grunt.log.error('grunt serve:env:server - Invalid option. env can be either "dev" or "dist". server can be either "http" or "https".');
       }
+    }
+  );
+
+  grunt.registerTask(
+    'test',
+    'Run test tasks. Usage: grunt test',
+    function (env) {
+      grunt.task.run([
+        'init',
+        'karma',
+        'watch:test'
+      ]);
     }
   );
 };

@@ -12,7 +12,7 @@ angular.module('HTMLTemplates', []).run(['$templateCache', function($templateCac
 
 
   $templateCache.put('common/html/sidenav.tpl.html',
-    "<div class=\"sidenav\"><ul><li><a ui-sref=\"demo\">Demos</a></li><li><a ui-sref=\"login\">Login</a></li><li><a ui-sref=\"userprofile\">User Profile</a></li><li><a ui-sref=\"usersettings\">User Settings</a></li></ul></div>"
+    "<div class=\"sidenav\"><ul><li><a ui-sref=\"demo\">Demos</a></li><li><a ui-sref=\"login\">Login</a></li><li><a ui-sref=\"userprofile\">User Profile</a></li><li><a ui-sref=\"usersettings\">User Settings</a></li><li><a ui-sref=\"nestedmodules\">Nested Modules</a></li></ul></div>"
   );
 
 
@@ -48,6 +48,26 @@ angular.module('HTMLTemplates', []).run(['$templateCache', function($templateCac
 
   $templateCache.put('modules/home/home.tpl.html',
     "<div class=\"padding-20\"><h1>{{home.title}}!</h1></div>"
+  );
+
+
+  $templateCache.put('modules/module1/module1.tpl.html',
+    "<h1>Module1</h1>"
+  );
+
+
+  $templateCache.put('modules/module2/module2.tpl.html',
+    "<h1>Module2</h1>"
+  );
+
+
+  $templateCache.put('modules/module3/module3.tpl.html',
+    "<h1>Module3</h1>"
+  );
+
+
+  $templateCache.put('modules/nestedmodules/nestedmodules.tpl.html',
+    "<h1>NestedModules</h1><div><input type=\"checkbox\" id=\"mod1\" ng-model=\"nestedmodules.showModule1\"><label for=\"mod1\">Show Module 1</label></div><div><input type=\"checkbox\" id=\"mod2\" ng-model=\"nestedmodules.showModule2\"><label for=\"mod2\">Show Module 2</label></div><div><input type=\"checkbox\" id=\"mod3\" ng-model=\"nestedmodules.showModule3\"><label for=\"mod3\">Show Module 3</label></div><div ui-view=\"module1\" ng-show=\"nestedmodules.showModule1\"></div><div ui-view=\"module2\" ng-show=\"nestedmodules.showModule2\"></div><div ui-view=\"module3\" ng-show=\"nestedmodules.showModule3\"></div>"
   );
 
 

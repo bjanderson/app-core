@@ -6,6 +6,7 @@ angular
     [
       'Demo',
       'Home',
+      'NestedModules',
       'User',
       'ui.router'
     ]

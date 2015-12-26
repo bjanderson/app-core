@@ -2,9 +2,9 @@
 
 var express = require('express'),
   bodyparser = require('body-parser'),
-  server = express(),
+  server = express();/*,
   scribe = require('scribe-js')({rootPath: 'http-logs'}),
-  console = process.console;
+  console = process.console;*/
 
 module.exports = httpServer;
 
@@ -15,8 +15,8 @@ function httpServer(config) {
   if (config.env === 'dist') {
     console.log('serving /dist');
     // configure express to use the scribe logger
-    server.use(scribe.express.logger());
-    server.use('/http-logs', scribe.webPanel()); // access at http://localhost:[port]/http-logs
+    //server.use(scribe.express.logger());
+    //server.use('/http-logs', scribe.webPanel()); // access at http://localhost:[port]/http-logs
     server.use(express.static(__dirname + '/../../dist'));
   } else {
     console.log('serving /client');

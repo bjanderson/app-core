@@ -4,9 +4,9 @@ var express = require('express'),
   bodyparser = require('body-parser'),
   fs = require('fs'),
   https = require('https'),
-  server = express(),
+  server = express();/*,
   scribe = require('scribe-js')({rootPath: 'https-logs'}),
-  console = process.console;
+  console = process.console;*/
 
 module.exports = httpsServer;
 
@@ -23,8 +23,8 @@ function httpsServer(config) {
     };
 
   // configure express to use the scribe logger
-  server.use(scribe.express.logger());
-  server.use('/https-logs', scribe.webPanel()); // access at https://localhost:[port]/https-logs
+  //server.use(scribe.express.logger());
+  //server.use('/https-logs', scribe.webPanel()); // access at https://localhost:[port]/https-logs
 
   //configure express to serve static files from the given directory
   server.use(express.static(__dirname + '/../../client'));  

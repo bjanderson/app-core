@@ -22,7 +22,6 @@ angular
   .controller(
     'MainAppCtrl',
     [
-      '$location',
       '$scope',
       '$state',
       'UserService',
@@ -36,7 +35,7 @@ function MainAppConfig($urlRouterProvider) {
     .otherwise('/home');  //default to the entry point for our ui-router state handlers
 }
 
-function MainAppCtrl($location, $scope, $state, UserService) {
+function MainAppCtrl($scope, $state, UserService) {
 
   $scope.$on('$stateChangeStart', function (event, toState, toParams) {
     if (toState.authenticate && !UserService.isLoggedIn()) {

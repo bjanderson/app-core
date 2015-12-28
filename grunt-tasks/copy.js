@@ -16,6 +16,8 @@ module.exports.tasks = {
             'common/img/**',
             'vendor/bootstrap/dist/css/bootstrap.min.css',
             'vendor/bootstrap/dist/fonts/**',
+            'vendor/fontawesome/css/font-awesome.min.css',
+            'vendor/fontawesome/fonts/**',
           ],
           dest: 'dist/'
         }

@@ -8,12 +8,15 @@
   <title ng-bind="pageTitle"></title>
   
   <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css" />
   <link rel="stylesheet" href="main.min.css">
 </head>
 <body>
   
   <header ng-include="'common/html/header.tpl.html'"></header>
-  <div ui-view></div>
+  <div class="container-fluid main">
+    <div ui-view></div>
+  </div>
   <footer ng-include="'common/html/footer.tpl.html'"></footer>
 
   <script src="vendor.js"></script>

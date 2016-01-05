@@ -4,11 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <title ng-bind="pageTitle"></title>
-  
+
   <!-- bower:css -->
-  <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css" />
   <!-- endbower -->
 
   <!-- add any css files that were not automatically added by bower -->
@@ -16,7 +15,7 @@
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  
+
   <header ng-include="'common/html/header.tpl.html'"></header>
   <div ng-include="'common/html/sidenav.tpl.html'"></div>
   <div class="container-fluid main">
@@ -26,10 +25,10 @@
 
   <!-- bower:js -->
   <script src="vendor/jquery/dist/jquery.js"></script>
-  <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
   <script src="vendor/angular/angular.js"></script>
-  <script src="vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
   <script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
   <!-- endbower -->
 
   <!-- injector:js -->
@@ -46,6 +45,6 @@
   <script src="modules/user/user.service.js"></script>
   <script src="main.js"></script>
   <!-- endinjector -->
-  
+
 </body>
 </html>

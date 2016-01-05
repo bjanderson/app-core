@@ -2,7 +2,7 @@
 'use strict';
 
 angular
-  .module('Demo', 
+  .module('Demo',
     [
       'DialogsDemo',
       'HTMLTemplates',
@@ -13,7 +13,7 @@ angular
   .config(
     [
       '$stateProvider',
-      DemoConfig    
+      DemoConfig
     ]
   )
 
@@ -43,7 +43,7 @@ function DemoConfig($stateProvider) {
           return $templateCache.get('modules/demo/dialogs/dialogs.demo.tpl.html');
         }
       }
-      
+
     },
 
     data: {
@@ -56,7 +56,7 @@ function DemoCtrl() {
   var self = this;
 
   self.title = 'Demo';
-  
+
 }
 
 

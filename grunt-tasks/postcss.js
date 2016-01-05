@@ -15,7 +15,7 @@ module.exports.tasks = {
           require('pixrem')(),
 
           // add vendor prefixes
-          require('autoprefixer-core')({
+          require('autoprefixer')({
             browsers: 'last 3 versions'
           }),
 

@@ -8,4 +8,4 @@ I am putting them all in this repo as different branches because each branch is 
 ## Branches:
 * angular-grunt - angularjs 1.x with grunt and bower. This template is about 90% complete, but is mostly just here for posterity since technology has moved on from these tools.
 
-* jspm - a simple template with some basic infrastructure set up in a way that should be easy to add other technologies and frameworks to without too much hassle.
+* jspm-starter - a simple template using JSPM and Babel with some basic infrastructure set up in a way that should be easy to add other technologies and frameworks to without too much hassle.

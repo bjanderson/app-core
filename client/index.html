@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" id="myapp">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>JSPM Starter</title>
+
+</head>
+<body>
+
+  <h1>JSPM Starter</h1>
+
+  <!--DEV-->
+  <script src="/jspm_packages/system.js"></script>
+  <script src="/config.js"></script>
+  <script>
+    System.import('/app/app.js');
+  </script>
+  <!--DEV-->
+
+  <!--PROD
+  <script src="app.min.js"></script>
+  PROD-->
+
+</body>
+</html>

@@ -8,8 +8,11 @@
   "main": "",
   "scripts": {
     "build": "gulp build",
-    "test": "mocha --compilers js:babel-core/register --require test/setup.js --require ignore-styles --recursive",
-    "test:watch": "mocha --compilers js:babel-core/register --require test/setup.js --recursive --watch"
+    "postinstall": "jspm install",
+    "start": "gulp serve",
+    "test": "mocha --compilers js:babel-core/register --require test/setup.js --recursive",
+    "test:watch": "mocha --compilers js:babel-core/register --require test/setup.js --recursive --watch",
+    "test:cover": "istanbul cover _mocha --require test/setup.js -- ./test --compilers js:babel-core/register --recursive -R spec"
   },
   "repository": {
     "type": "git",
@@ -30,16 +33,16 @@
     "gulp-nodemon": "^2.0.6",
     "gulp-replace": "^0.5.4",
     "gulp-standard": "^6.0.5",
-    "ignore-styles": "^1.2.0",
+    "istanbul": "^1.0.0-alpha.2",
     "jspm": "^0.16.31",
     "mocha": "^2.4.5",
     "wrench": "^1.5.8"
   },
   "jspm": {
-    "configFile": "client/jspm-config.js",
     "directories": {
       "baseURL": "client"
     },
+    "configFile": "client/jspm-config.js",
     "dependencies": {
       "clean-css": "npm:clean-css@^3.4.10",
       "css": "github:systemjs/plugin-css@^0.1.20"

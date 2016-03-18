@@ -1,4 +1,3 @@
-import { expect } from 'chai'
 import { getAFlag } from 'app/app'
 
 describe('app', function () {

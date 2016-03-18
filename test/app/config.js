@@ -1,5 +1,4 @@
-import { expect } from 'chai'
-import config from 'app/config'
+import config from 'client/app/config'
 
 describe('config', function () {
   it('should work', function () {

@@ -1,1 +1,4 @@
-require('app-module-path').addPath(__dirname + '/../client')
+import { addPath } from 'app-module-path'
+import path from 'path'
+
+addPath(path.join(__dirname, '/../client'))

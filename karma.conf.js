@@ -68,14 +68,14 @@ module.exports = function (config) {
 
     // tell karma about jspm
     jspm: {
-      // Edit this to your needs
+      noPackagesCache: true,
       config: 'client/jspm-config.js',
       packages: 'client/jspm_packages/',
       loadFiles: [
         'test/**/*.js'
       ],
       serveFiles: [
-        'client/**/*.js'
+        'client/app/**/*.js'
       ]
     },
 

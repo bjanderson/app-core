@@ -1,3 +1,6 @@
+import 'style.css!'
+import 'materialize'
+
 import config from 'app/config'
 
 function getAFlag () {

@@ -1,0 +1,27 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'test' ]
+2 info using npm@3.8.6
+3 info using node@v6.1.0
+4 verbose run-script [ 'pretest', 'test', 'posttest' ]
+5 info lifecycle jspm-starter-react@1.0.0~pretest: jspm-starter-react@1.0.0
+6 silly lifecycle jspm-starter-react@1.0.0~pretest: no script for pretest, continuing
+7 info lifecycle jspm-starter-react@1.0.0~test: jspm-starter-react@1.0.0
+8 verbose lifecycle jspm-starter-react@1.0.0~test: unsafe-perm in lifecycle true
+9 verbose lifecycle jspm-starter-react@1.0.0~test: PATH: /usr/lib/node_modules/npm/bin/node-gyp-bin:/home/bj/dev/projects/app-core/node_modules/.bin:/usr/bin:/home/bj/npm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+10 verbose lifecycle jspm-starter-react@1.0.0~test: CWD: /home/bj/dev/projects/app-core
+11 silly lifecycle jspm-starter-react@1.0.0~test: Args: [ '-c', './node_modules/karma/bin/karma start' ]
+12 verbose stack Error: write EPIPE
+12 verbose stack     at exports._errnoException (util.js:949:11)
+12 verbose stack     at WriteWrap.afterWrite (net.js:793:14)
+13 verbose cwd /home/bj/dev/projects/app-core
+14 error Linux 3.19.0-32-generic
+15 error argv "/usr/bin/nodejs" "/usr/bin/npm" "test"
+16 error node v6.1.0
+17 error npm  v3.8.6
+18 error code EPIPE
+19 error errno EPIPE
+20 error syscall write
+21 error write EPIPE
+22 error If you need help, you may report this error at:
+22 error     <https://github.com/npm/npm/issues>
+23 verbose exit [ 1, true ]

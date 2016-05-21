@@ -11,7 +11,7 @@
     "postinstall": "jspm install",
     "serve:dist": "google-chrome http://localhost:20080 && NODE_ENV=dist nodejs server/app.js",
     "start": "gulp serve",
-    "test": "karma start",
+    "test": "./node_modules/karma/bin/karma start",
     "test:watch": "npm test -- --no-single-run --auto-watch"
   },
   "repository": {
@@ -34,12 +34,12 @@
     "gulp-standard": "^6.0.5",
     "isparta": "^4.0.0",
     "istanbul": "github:gotwarlost/istanbul#source-map",
-    "jspm": "^0.16.31",
+    "jspm": "^0.17.0-beta.13",
     "karma": "^0.13.22",
     "karma-babel-preprocessor": "^6.0.1",
     "karma-chai": "^0.1.0",
     "karma-coverage": "github:douglasduteil/karma-coverage#next",
-    "karma-jspm": "^2.0.2",
+    "karma-jspm": "^2.1.0",
     "karma-mocha": "^0.2.2",
     "karma-phantomjs-launcher": "^1.0.0",
     "karma-spec-reporter": "0.0.24",

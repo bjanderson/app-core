@@ -1,4 +1,4 @@
-import config from 'client/app/config'
+import config from 'app/config'
 
 describe('config', function () {
   it('should work', function () {

@@ -69,6 +69,7 @@ module.exports = function (config) {
     // tell karma about jspm
     jspm: {
       noPackagesCache: true,
+      nocache: true,
       config: 'client/jspm-config.js',
       packages: 'client/jspm_packages/',
       loadFiles: [
@@ -76,14 +77,19 @@ module.exports = function (config) {
       ],
       serveFiles: [
         'client/app/**/*.js'
-      ]
+      ],
+      paths: {
+        "*": "client/*",
+        "github:*": "client/jspm_packages/github/*",
+        "npm:*": "client/jspm_packages/npm/*"
+      }
     },
 
     // level of logging
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
     logLevel: config.LOG_INFO,
 
-    plugins: [
+    /*plugins: [
       'karma-babel-preprocessor',
       'karma-chai',
       'karma-coverage',
@@ -91,7 +97,7 @@ module.exports = function (config) {
       'karma-mocha',
       'karma-phantomjs-launcher',
       'karma-spec-reporter'
-    ],
+    ],*/
 
     // web server port
     port: 9876,
